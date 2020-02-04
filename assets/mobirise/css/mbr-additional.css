@@ -1588,7 +1588,7 @@ a {
 .cid-rPxGZ9Ozu1 {
   padding-top: 75px;
   padding-bottom: 75px;
-  background-color: #d4492f;
+  background-color: #111111;
 }
 .cid-rPxGZ9Ozu1 .row-links {
   width: 100%;
@@ -1628,7 +1628,7 @@ a {
   align-items: center;
 }
 .cid-rPxGZ9Ozu1 .soc-item:hover {
-  background: #ffcc00;
+  background: #ec5030;
   animation-duration: 0.3s;
   animation-name: size;
 }
@@ -1715,7 +1715,7 @@ a {
   }
 }
 .cid-rPxGZ9Ozu1 H1 {
-  color: #ffffff;
+  color: #ec5030;
 }
 .cid-rPxGZ9Ozu1 .foot-menu-item B {
   color: #ffffff;
