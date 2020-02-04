@@ -879,7 +879,7 @@ a {
   background: #d4492f;
 }
 .cid-rOMpjVXnnA .img2 {
-  background: #ffcc00;
+  background: #333333;
 }
 .cid-rOMpjVXnnA .mbr-iconfont {
   display: block;
@@ -932,51 +932,21 @@ a {
 .cid-rOMpjVXnnA .link-wrap {
   color: #555555;
 }
-.cid-rOMpkjcMPk {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  background-color: #ec5030;
-}
-.cid-rOMpkjcMPk .wrapper {
-  max-width: 700px;
-  margin: auto;
-  height: 100%;
-  padding: 6rem 1rem;
-}
-.cid-rOMpkjcMPk .card {
-  border-right: 1px solid white;
-}
-.cid-rOMpkjcMPk .btn-white-outline:hover,
-.cid-rOMpkjcMPk .btn-white-outline:focus {
-  color: #ec5030 !important;
-}
-@media (max-width: 992px) {
-  .cid-rOMpkjcMPk .card {
-    border-right: 0px;
-    border-bottom: 1px solid white;
-  }
-  .cid-rOMpkjcMPk .wrapper {
-    padding: 6rem 0rem;
-  }
-}
-.cid-rOMpkybE8n {
+.cid-rOMplDqUEA {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #ffffff;
 }
-.cid-rOMpkybE8n .link-wrap {
+.cid-rOMplDqUEA .link-wrap {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
 }
-.cid-rOMpkybE8n .link {
+.cid-rOMplDqUEA .link {
   display: inline-block;
   position: relative;
   width: fit-content;
   padding: 0 1.4rem;
 }
-.cid-rOMpkybE8n .link:before {
+.cid-rOMplDqUEA .link:before {
   position: absolute;
   left: 0px;
   top: 55%;
@@ -986,56 +956,17 @@ a {
   color: #ec5030;
   font-size: 0.8rem;
 }
-.cid-rOMpkybE8n .link,
-.cid-rOMpkybE8n .link-wrap {
+.cid-rOMplDqUEA .link,
+.cid-rOMplDqUEA .link-wrap {
   color: #555555;
 }
-.cid-rOMpkybE8n img {
+.cid-rOMplDqUEA img {
   width: 100%;
 }
 @media (max-width: 992px) {
-  .cid-rOMpkybE8n .card {
+  .cid-rOMplDqUEA .card {
     margin-bottom: 2rem!important;
   }
-}
-@media (max-width: 767px) {
-  .cid-rOMpkybE8n .link-wrap {
-    align-items: center;
-  }
-}
-.cid-rOMpkRIdpx {
-  padding-top: 45px;
-  padding-bottom: 45px;
-  background-color: #fafafa;
-}
-.cid-rOMpkRIdpx .mbr-text,
-.cid-rOMpkRIdpx .mbr-section-btn {
-  color: #999999;
-}
-.cid-rOMpkRIdpx ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 1.6rem;
-}
-.cid-rOMpkRIdpx ul li::before {
-  content: "\2022";
-  color: #ec5030;
-  font-weight: bold;
-  font-size: 2rem;
-  display: inline-block;
-  width: 1.5rem;
-  margin-left: -1.5rem;
-  transform: translateY(5px);
-}
-.cid-rOMpkRIdpx li {
-  padding-bottom: 0rem;
-  transition: all 0.3s;
-}
-.cid-rOMpkRIdpx li a {
-  font-weight: 600;
-}
-.cid-rOMpkRIdpx li:hover {
-  color: #ec5030;
 }
 .cid-rOMpl4dqof {
   padding-top: 60px;
@@ -1099,41 +1030,39 @@ a {
 .cid-rOMpl4dqof .main-title {
   color: #ffffff;
 }
-.cid-rOMplDqUEA {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: #ffffff;
+.cid-rOMpkRIdpx {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background-color: #fafafa;
 }
-.cid-rOMplDqUEA .link-wrap {
-  width: 100%;
+.cid-rOMpkRIdpx .mbr-text,
+.cid-rOMpkRIdpx .mbr-section-btn {
+  color: #999999;
 }
-.cid-rOMplDqUEA .link {
-  display: inline-block;
-  position: relative;
-  width: fit-content;
-  padding: 0 1.4rem;
+.cid-rOMpkRIdpx ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 1.6rem;
 }
-.cid-rOMplDqUEA .link:before {
-  position: absolute;
-  left: 0px;
-  top: 55%;
-  transform: translateY(-50%);
-  content: "\e908";
-  font-family: 'Moririse2' !important;
+.cid-rOMpkRIdpx ul li::before {
+  content: "\2022";
   color: #ec5030;
-  font-size: 0.8rem;
+  font-weight: bold;
+  font-size: 2rem;
+  display: inline-block;
+  width: 1.5rem;
+  margin-left: -1.5rem;
+  transform: translateY(5px);
 }
-.cid-rOMplDqUEA .link,
-.cid-rOMplDqUEA .link-wrap {
-  color: #555555;
+.cid-rOMpkRIdpx li {
+  padding-bottom: 0rem;
+  transition: all 0.3s;
 }
-.cid-rOMplDqUEA img {
-  width: 100%;
+.cid-rOMpkRIdpx li a {
+  font-weight: 600;
 }
-@media (max-width: 992px) {
-  .cid-rOMplDqUEA .card {
-    margin-bottom: 2rem!important;
-  }
+.cid-rOMpkRIdpx li:hover {
+  color: #ec5030;
 }
 .cid-rOMplO9CAv {
   padding-top: 0px;
@@ -1788,6 +1717,9 @@ a {
 .cid-rPxGZ9Ozu1 H1 {
   color: #ffffff;
 }
+.cid-rPxGZ9Ozu1 .foot-menu-item B {
+  color: #ffffff;
+}
 #custom-html-1 {
   /* Type valid CSS here */
 }
@@ -1920,7 +1852,7 @@ a {
 }
 @media (min-width: 992px) {
   .cid-rOMppMkTcD .navbar.collapsed.opened:not(.navbar-short) .navbar-collapse {
-    max-height: calc(98.5vh - 3.8rem);
+    max-height: calc(98.5vh - 8rem);
   }
 }
 .cid-rOMppMkTcD .navbar.collapsed .dropdown-menu .dropdown-submenu {
