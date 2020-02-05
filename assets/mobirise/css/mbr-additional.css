@@ -1030,40 +1030,6 @@ a {
 .cid-rOMpl4dqof .main-title {
   color: #ffffff;
 }
-.cid-rOMpkRIdpx {
-  padding-top: 45px;
-  padding-bottom: 45px;
-  background-color: #fafafa;
-}
-.cid-rOMpkRIdpx .mbr-text,
-.cid-rOMpkRIdpx .mbr-section-btn {
-  color: #999999;
-}
-.cid-rOMpkRIdpx ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 1.6rem;
-}
-.cid-rOMpkRIdpx ul li::before {
-  content: "\2022";
-  color: #ec5030;
-  font-weight: bold;
-  font-size: 2rem;
-  display: inline-block;
-  width: 1.5rem;
-  margin-left: -1.5rem;
-  transform: translateY(5px);
-}
-.cid-rOMpkRIdpx li {
-  padding-bottom: 0rem;
-  transition: all 0.3s;
-}
-.cid-rOMpkRIdpx li a {
-  font-weight: 600;
-}
-.cid-rOMpkRIdpx li:hover {
-  color: #ec5030;
-}
 .cid-rOMplO9CAv {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -1467,33 +1433,6 @@ a {
   padding-bottom: 120px;
   background-color: #d4492f;
 }
-.cid-rPCJDovsEs {
-  padding-top: 45px;
-  padding-bottom: 45px;
-  background-color: #ffffff;
-}
-.cid-rPCJDovsEs .card-wrapper {
-  background-image: url("../../../assets/images/screenshot-2020-02-05-at-11.20.29-1054x547.png");
-  background-size: cover;
-  background-position: center;
-  padding: 3rem;
-  padding-top: 25rem;
-  padding-bottom: 2rem;
-  border-radius: 14px;
-}
-@media (max-width: 767px) {
-  .cid-rPCJDovsEs .card-wrapper {
-    padding: 1rem;
-    padding-top: 15rem;
-  }
-}
-.cid-rPCJDovsEs H1 {
-  color: #ec5030;
-}
-.cid-rPCJDovsEs .mbr-text,
-.cid-rPCJDovsEs .mbr-section-btn {
-  color: #ec5030;
-}
 .cid-rOMpmGzqJo {
   padding-top: 75px;
   padding-bottom: 75px;
@@ -1611,6 +1550,33 @@ a {
 }
 .cid-rOMpmGzqJo H5 {
   text-align: center;
+}
+.cid-rPCJDovsEs {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background-color: #ffffff;
+}
+.cid-rPCJDovsEs .card-wrapper {
+  background-image: url("../../../assets/images/screenshot-2020-02-05-at-11.20.29-1054x547.png");
+  background-size: cover;
+  background-position: center;
+  padding: 3rem;
+  padding-top: 25rem;
+  padding-bottom: 2rem;
+  border-radius: 14px;
+}
+@media (max-width: 767px) {
+  .cid-rPCJDovsEs .card-wrapper {
+    padding: 1rem;
+    padding-top: 15rem;
+  }
+}
+.cid-rPCJDovsEs H1 {
+  color: #ec5030;
+}
+.cid-rPCJDovsEs .mbr-text,
+.cid-rPCJDovsEs .mbr-section-btn {
+  color: #ffffff;
 }
 .cid-rPxGZ9Ozu1 {
   padding-top: 75px;

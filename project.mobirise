@@ -423,61 +423,6 @@
         {
           "alias": false,
           "_styles": {
-            "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 15px)",
-              "padding-bottom": "(@paddingBottom * 15px)"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            ".mbr-text, .mbr-section-btn": {
-              "color": "#999999"
-            },
-            "ul": {
-              "list-style": "none",
-              "margin": "0",
-              "padding-left": "1.6rem"
-            },
-            "ul li::before": {
-              "content": "\"\\2022\"",
-              "color": "@primaryColor",
-              "font-weight": "bold",
-              "font-size": "2rem",
-              "display": "inline-block",
-              "width": "1.5rem",
-              "margin-left": "-1.5rem",
-              "transform": "translateY(5px)"
-            },
-            "li": {
-              "padding-bottom": "0rem",
-              "transition": "all 0.3s",
-              "a": {
-                "font-weight": "600"
-              },
-              "&:hover": {
-                "color": "@primaryColor"
-              }
-            }
-          },
-          "_name": "content04",
-          "_customHTML": "<section group=\"Content\" class=\"content04\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"3\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"3\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <select title=\"Col\" name=\"colAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\" selected>2</option>\n        </select>\n        <input type=\"range\" inline title=\"Col 1 Items\" name=\"col1\" min=\"1\" max=\"5\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Col 2 Items\" name=\"col2\" min=\"1\" max=\"5\" step=\"1\" value=\"5\" condition=\"colAmount == 2\">\n\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#fafafa\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-md-12 col-lg-12\" mbr-if=\"showTitle\">\n\n                <h2 class=\"mbr-section-title pb-3 mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\">Frequently asked questions</h2>\n\n            </div>\n\n\n            <div class=\"mbr-black col-md-12 col-lg-6\" mbr-if=\"colAmount>0\">\n\n\n                <ul>\n                    <li mbr-text mbr-if=\"col1>0\" class=\"item-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-4\">How do I <a href=\"#\">sign up</a>?<br>\n                        <p class=\"mbr-text mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Getting Started / Creating an Account</p>\n\n                    </li>\n\n\n                    <li mbr-text mbr-if=\"col1>1\" class=\"item-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-4\">Why was my bank account <a href=\"#\">rejected</a>?<br>\n                        <p class=\"mbr-text mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Getting Started / Bank Account Verification\n                        </p>\n\n                    </li>\n\n\n                    <li mbr-text mbr-if=\"col1>2\" class=\"item-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-4\">Do I have to sign a data <a href=\"#\">processing agreement</a>?<br>\n                        <p class=\"mbr-text mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Getting Started / General Data Protection\n                            Regulation</p>\n\n                    </li>\n\n                    <li mbr-text mbr-if=\"col1>3\" class=\"item-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-4\">How do I <a href=\"#\">link payments&nbsp;</a>to my <a href=\"#\">website</a>?<br>\n                        <p class=\"mbr-text mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Integration / I have a general question\n                            about integrating</p>\n\n                    </li>\n\n                    <li mbr-text mbr-if=\"col1>4\" class=\"item-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-4\">How do I <a href=\"#\">refund </a>a payment to one of my\n                        consumers?<br>\n                        <p class=\"mbr-text mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Payments / Refunds</p>\n\n                    </li>\n\n\n\n                </ul>\n\n\n            </div>\n\n\n            <div class=\"mbr-black col-md-12 col-lg-6\" mbr-if=\"colAmount>1\">\n\n\n                <ul>\n                    <li mbr-text mbr-if=\"col2>0\" class=\"item-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-4\">How do I <a href=\"#\">activate payment methods</a> in my account?<br>\n                        <p class=\"mbr-text mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Getting Started / Activating Payment Methods\n                        </p>\n\n                    </li>\n\n\n                    <li mbr-text mbr-if=\"col2>1\" class=\"item-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-4\">Is a <a href=\"#\">business account</a> compulsory?<br>\n                        <p class=\"mbr-text mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Getting Started / Bank Account Verification\n                        </p>\n\n                    </li>\n\n\n                    <li mbr-text mbr-if=\"col2>2\" class=\"item-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-4\">How do I <a href=\"#\">activate credit card</a> payments?<br>\n                        <p class=\"mbr-text mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Payment Methods / Credit Card</p>\n\n                    </li>\n\n                    <li mbr-text mbr-if=\"col2>3\" class=\"item-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-4\">When does <a href=\"#\">pay out</a>?<br>\n                        <p class=\"mbr-text mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Payments / Payouts</p>\n\n                    </li>\n\n                    <li mbr-text mbr-if=\"col2>4\" class=\"item-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-4\">How do I <a href=\"#\">become a partner</a>?<br>\n                        <p class=\"mbr-text mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Partners / Partner Program</p>\n\n                    </li>\n\n\n\n                </ul>\n\n\n            </div>\n\n\n        </div>\n    </div>\n</section>",
-          "_anchor": "content04-5",
-          "_isUserblock": true,
-          "_sourceTheme": "financem4",
-          "_cid": "rOMpkRIdpx",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": [],
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
             "padding-top": "(@paddingTop * 15px)",
             "padding-bottom": "(@paddingBottom * 15px)",
             "background-color": "@bgColor",
@@ -800,7 +745,7 @@
             "slides": [
               {
                 "image": "@PROJECT_PATH@/assets/images/mbr-1920x1279.jpg",
-                "active": false,
+                "active": true,
                 "showButtons": false,
                 "showText": true,
                 "showTitle": false,
@@ -815,7 +760,8 @@
                 "overlay": true,
                 "contentAlign": "center",
                 "text": "Fox 1",
-                "buttons": "<a data-app-btn=\"true\" class=\"btn btn-success\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\">FOR WINDOWS</a> <a data-app-btn=\"true\" class=\"btn  btn-white-outline\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\">FOR MAC</a>"
+                "buttons": "<a data-app-btn=\"true\" class=\"btn btn-success\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\">FOR WINDOWS</a> <a data-app-btn=\"true\" class=\"btn  btn-white-outline\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\">FOR MAC</a>",
+                "overlayColor": "#ec5030"
               },
               {
                 "image": "@PROJECT_PATH@/assets/images/mbr-2-1920x1279.jpg",
@@ -834,11 +780,13 @@
                 "overlay": true,
                 "contentAlign": "center",
                 "text": "Fox 2",
-                "buttons": "<a data-app-btn=\"true\" class=\"btn btn-primary\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\">FOR WINDOWS</a> <a data-app-btn=\"true\" class=\"btn  btn-white-outline\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\">FOR MAC</a>"
+                "buttons": "<a data-app-btn=\"true\" class=\"btn btn-primary\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\">FOR WINDOWS</a> <a data-app-btn=\"true\" class=\"btn  btn-white-outline\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\">FOR MAC</a>",
+                "overlayOpacity": "0.4",
+                "overlayColor": "#ec5030"
               },
               {
                 "image": "@PROJECT_PATH@/assets/images/mbr-3-1920x1279.jpg",
-                "active": true,
+                "active": false,
                 "showButtons": false,
                 "showText": true,
                 "showTitle": false,
@@ -853,7 +801,8 @@
                 "overlay": true,
                 "contentAlign": "center",
                 "text": "Fox 3",
-                "buttons": "<a data-app-btn=\"true\" class=\"btn btn-info\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\">FOR WINDOWS</a> <a data-app-btn=\"true\" class=\"btn  btn-white-outline\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\">FOR MAC</a>"
+                "buttons": "<a data-app-btn=\"true\" class=\"btn btn-info\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\">FOR WINDOWS</a> <a data-app-btn=\"true\" class=\"btn  btn-white-outline\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\">FOR MAC</a>",
+                "overlayColor": "#ec5030"
               }
             ]
           }
@@ -994,50 +943,6 @@
         {
           "alias": false,
           "_styles": {
-            "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 15px)",
-              "padding-bottom": "(@paddingBottom * 15px)"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            ".card-wrapper": {
-              "background-image": "url(@image)",
-              "background-size": "cover",
-              "background-position": "center",
-              "padding": "3rem",
-              "padding-top": "25rem",
-              "padding-bottom": "2rem",
-              "border-radius": "14px"
-            },
-            "@media (max-width: 767px)": {
-              ".card-wrapper": {
-                "padding": "1rem",
-                "padding-top": "15rem"
-              }
-            },
-            "H1": {
-              "color": "#ec5030"
-            },
-            ".mbr-text, .mbr-section-btn": {
-              "color": "#ec5030"
-            }
-          },
-          "_name": "image04",
-          "_customHTML": "<section group=\"Images\" class=\"image04\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"3\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"3\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"image\" name=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/screenshot-2020-02-05-at-11.20.29-1054x547.png\" parallax>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container align-left\">\n        <div class=\"row justify-content-center\">\n            <div class=\"mbr-white col-md-12 col-lg-12\">\n                <div class=\"card-wrapper\">\n                    <h1 class=\"mbr-section-title mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">Gallery of Student Work</h1>\n                    <p class=\"mbr-text mbr-semibold mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                        View this interactive display on your device and see it come to life.</p>\n\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "rPCJDovsEs",
-          "_anchor": "image04-p",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
             "padding-top": "(@paddingTop * 15px)",
             "padding-bottom": "(@paddingBottom * 15px)",
             ".mbr-overlay": {
@@ -1141,6 +1046,50 @@
           "_cid": "rOMpmGzqJo",
           "_PHPplaceholders": [],
           "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".card-wrapper": {
+              "background-image": "url(@image)",
+              "background-size": "cover",
+              "background-position": "center",
+              "padding": "3rem",
+              "padding-top": "25rem",
+              "padding-bottom": "2rem",
+              "border-radius": "14px"
+            },
+            "@media (max-width: 767px)": {
+              ".card-wrapper": {
+                "padding": "1rem",
+                "padding-top": "15rem"
+              }
+            },
+            "H1": {
+              "color": "#ec5030"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "image04",
+          "_customHTML": "<section group=\"Images\" class=\"image04\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"3\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"3\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"image\" name=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/screenshot-2020-02-05-at-11.20.29-1054x547.png\" parallax>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container align-left\">\n        <div class=\"row justify-content-center\">\n            <div class=\"mbr-white col-md-12 col-lg-12\">\n                <div class=\"card-wrapper\">\n                    <h1 class=\"mbr-section-title mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">The Interactive Gallery</h1>\n                    <p class=\"mbr-text mbr-semibold mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                        View this display on your device and see it come to life.</p>\n\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rPCJDovsEs",
+          "_anchor": "image04-p",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
